@@ -3,21 +3,20 @@ import matplotlib.pyplot as plt
 
 # Data Preprocessor Class
 class DataPreprocessor:
-    """Handles data cleaning and preprocessing tasks."""
 
     def __init__(self, dataframe):
         self.df = dataframe
 
     def check_null_values(self):
-        """Checks for null values in the DataFrame."""
+        
         print("Null Values:\n", self.df.isnull().sum())
 
     def check_duplicates(self):
-        """Checks for duplicate columns."""
+        
         print("Duplicate Columns:", self.df.columns.duplicated())
 
     def check_datatypes(self):
-        """Prints the data types of each column."""
+        
         print("Column Data Types:")
         for col in self.df.columns:
             print(f"{col}: {self.df.dtypes[col]}")
@@ -46,13 +45,12 @@ class DataAnalyzer:
 
 # Data Visualizer Class
 class DataVisualizer:
-    """Handles data visualization tasks such as plotting histograms and charts."""
 
     def __init__(self, dataframe):
         self.df = dataframe
 
     def plot_histogram(self, column, bins=50, output_file="histogram.png"):
-        """Plots a histogram for the given column."""
+        
         if column not in self.df.columns:
             print(f"Column '{column}' not found.")
             return
@@ -70,13 +68,12 @@ class DataVisualizer:
         self.df = df
 
     def revenue_profit(self, start_month, start_year, end_month, end_year, output_file="revenue_profit.png"):
-        # Filter data based on the date range
+
         filtered_df = self.df[
             (self.df['Date'] >= pd.Timestamp(year=start_year, month=start_month, day=1)) &
             (self.df['Date'] <= pd.Timestamp(year=end_year, month=end_month, day=1))
         ]
         
-        # Plot Revenue and Profit trends
         plt.figure(figsize=(10, 6))
         plt.plot(filtered_df['Date'], filtered_df['Revenue'], label='Revenue', marker='o')
         plt.plot(filtered_df['Date'], filtered_df['Profit'], label='Profit', marker='o')
@@ -87,9 +84,9 @@ class DataVisualizer:
         plt.grid()
         plt.savefig(output_file)
         plt.close()
-        
+
     def gender_distribution(self, output_file="gender_distribution.png"):
-        """Plots the gender distribution as a pie chart."""
+    
         if "Customer_Gender" not in self.df.columns:
             print("Column 'Customer_Gender' not found.")
             return
@@ -103,7 +100,7 @@ class DataVisualizer:
         plt.show()
 
     def revenue_profit_trends(self, start_month, start_year, end_month, end_year, output_file="revenue_profit.png"):
-        """Plots revenue and profit trends over time."""
+        
         if 'Date' not in self.df.columns or 'Revenue' not in self.df.columns or 'Profit' not in self.df.columns:
             print("Required columns ('Date', 'Revenue', 'Profit') not found.")
             return
@@ -132,7 +129,7 @@ class DataVisualizer:
 # Main Execution
 if __name__ == "__main__":
     # Load data
-    file_path = input("Enter the path to the sales data file: ")
+    file_path = input("C:/EntansTask/sales_data.xlsx")
     df = pd.read_excel(file_path)
 
     # Instantiate and use the classes
