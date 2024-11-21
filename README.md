@@ -52,6 +52,16 @@
 - sub_category_profit.png: Sub-category performance by profit.
 - sub_category_revenue.png: Sub-category performance by revenue.
 
+## Unit Testing
+ - The TestDataTasks class uses unittest to test various functionalities in the data processing pipeline. It includes tests for:
+     Validating column names and data types.Verifying the presence of essential columns.Ensuring the generated plot files are saved correctly.
+### Test cases
+- test_column_datatypes: Validates the data types of the columns in the DataFrame.
+- test_column_names: Checks that the DataFrame contains the expected columns.
+- test_total_rows: Verifies that the number of rows in the DataFrame matches the expected count.
+- test_revenue_profit_trends: Tests the revenue_profit method to ensure the plot is saved correctly.
+- test_gender_distribution: Tests the gender_distribution method to verify that the pie chart is generated and saved.
+     
 ## Conclusion
 - This project demonstrates the power of data visualization and analysis in deriving meaningful insights from sales data. By identifying trends and performance metrics, businesses can make informed decisions to improve profitability and customer satisfaction.
 
