@@ -47,7 +47,7 @@ analyzer.unique_counts()
 class DataAnalyzer:
     def plot_histogram(self, column,bins = 50, output_file = "histogram.png"):
         if column not in df.columns:
-            print(f"{column} Column not found in the datatset")
+            print(f"{column} Column not found")
             return
         plt.figure(figsize=(8,6))
         plt.hist(df[column], bins=bins, color='blue', edgecolor='black')
@@ -124,7 +124,7 @@ class DataVisualizer:
     def profit_margin(self, output_file="profit_margin_scatter.png"):
         
         if 'Product' not in df.columns or 'Revenue' not in df.columns or 'Profit' not in df.columns:
-            print("Columns 'Product', 'Revenue', or 'Profit' not found in the dataset.")
+            print("Columns 'Product', 'Revenue', or 'Profit' not found")
             return
 
         df['Profit_Margin'] = df['Profit'] / df['Revenue']
@@ -157,7 +157,7 @@ class DataVisualizer:
     def revenue_profit(self, start_month, start_year, end_month, end_year, output_file='revenue_profit.png'):
         
         if 'Date' not in df.columns or 'Revenue' not in df.columns or 'Profit' not in df.columns:
-            print("Columns 'Date', 'Revenue', or 'Profit' not found in the dataset.")
+            print("Columns 'Date', 'Revenue', or 'Profit' not found")
             return
 
         df['YearMonth'] = df['Date'].dt.to_period('M')
