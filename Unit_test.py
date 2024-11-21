@@ -3,8 +3,29 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Assuming DataVisualizer class is already defined earlier in the same file
+class DataVisualizer:
+    def __init__(self, df):
+        self.df = df
 
+    def revenue_profit(self, start_month, start_year, end_month, end_year, output_file="revenue_profit.png"):
+        # Filter data based on the date range
+        filtered_df = self.df[
+            (self.df['Date'] >= pd.Timestamp(year=start_year, month=start_month, day=1)) &
+            (self.df['Date'] <= pd.Timestamp(year=end_year, month=end_month, day=1))
+        ]
+        
+        # Plot Revenue and Profit trends
+        plt.figure(figsize=(10, 6))
+        plt.plot(filtered_df['Date'], filtered_df['Revenue'], label='Revenue', marker='o')
+        plt.plot(filtered_df['Date'], filtered_df['Profit'], label='Profit', marker='o')
+        plt.title('Revenue and Profit Trends')
+        plt.xlabel('Date')
+        plt.ylabel('Amount')
+        plt.legend()
+        plt.grid()
+        plt.savefig(output_file)
+        plt.close()
+        
 class TestDataTasks(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
