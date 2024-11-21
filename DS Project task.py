@@ -14,6 +14,7 @@ class DataPreprocessor:
     def duplicate(self):
         print("Duplicate")
         print(df.columns.duplicated())
+
     def Datatype(self):
         print("Dtype")
         for i in df.columns:
@@ -68,7 +69,7 @@ class DataVisualizer:
         gender_counts = df['Customer_Gender'].value_counts()
 
         plt.figure(figsize=(8,6))
-        gender_counts.plot(kind='pie', autopct='%1.1f%%', colors=['green', 'yellow'], startangle= 90, explode=(0.1, 0))
+        gender_counts.plot(kind='pie',autopct='%1.1f%%', colors=['green', 'yellow'], startangle= 90)
         plt.title('Gender Distribution')
         plt.ylabel("")
         plt.savefig(output_file)
