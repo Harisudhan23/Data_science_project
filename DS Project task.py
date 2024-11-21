@@ -37,6 +37,9 @@ class DataAnalyzer:
         sub_category_count = df["Sub_Category"].nunique()
         product_count = df["Product"].nunique() 
         print("output verified")
+        print("Product_category:",product_category_count)
+        print("sub_category:", sub_category_count)
+        print('Product:',product_count)
 
 analyzer = DataAnalyzer()
 analyzer.summary()
@@ -130,7 +133,7 @@ class DataVisualizer:
 
         product_profit_margin = df.groupby('Product')['Profit_Margin'].mean()
 
-        plt.figure(figsize=(10, 6))
+        plt.figure(figsize=(50, 25))
         plt.scatter(product_profit_margin.index, product_profit_margin.values, color='blue', alpha=0.7)
         plt.title("Average Profit Margin Per Product")
         plt.xlabel("Product")
@@ -172,7 +175,7 @@ class DataVisualizer:
 
         trends = filtered_df.groupby('YearMonth')[['Revenue', 'Profit']].sum()
 
-        plt.figure(figsize=(10, 6))
+        plt.figure(figsize=(25, 15))
         trends['Revenue'].plot(label='Revenue', marker='o', linestyle='-')
         trends['Profit'].plot(label='Profit', marker='o', linestyle='--')
         plt.title(f"Revenue and Profit Trends ({start_date} to {end_date})")
@@ -218,7 +221,7 @@ class DataVisualizer:
 
         grouped_data = df.groupby(['Product_Category', 'Sub_Category'])[metric].sum().unstack()
 
-        plt.figure(figsize=(12, 8))
+        plt.figure(figsize=(20, 10))
         grouped_data.plot(kind='bar', stacked=True, colormap='tab20c', edgecolor='black')
         plt.title(f"{metric} by Sub-Category within Product Categories")
         plt.xlabel("Product Category")
@@ -242,3 +245,5 @@ visualizer.sub_category_performance(metric="Revenue", output_file="sub_category_
 
 
 
+
+# %%
