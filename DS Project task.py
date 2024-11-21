@@ -1,6 +1,3 @@
-# %%
-#pip install matplotlib
-#pip install pandas 
 
 # %%
 import pandas as pd
@@ -52,7 +49,7 @@ class DataAnalyzer:
             print(f"{column} Column not found")
             return
         plt.figure(figsize=(8,6))
-        plt.hist(df[column], bins=bins, color='blue', edgecolor='black')
+        plt.hist(df[column], bins=bins, color='skyblue', edgecolor='black')
         plt.title(f'{column} Distribution')
         plt.xlabel(column)
         plt.ylabel('Frequency')
@@ -77,6 +74,7 @@ class DataVisualizer:
         plt.ylabel("")
         plt.savefig(output_file)
         print("saved''{output_file}'")
+        print("gender counts",gender_counts)
         plt.show()
 visualizer = DataVisualizer()
 visualizer.gender_distribution()        
@@ -96,6 +94,7 @@ class DataVisualizer:
         plt.ylabel("Revenue")
         plt.xticks(rotation = 45)
         plt.savefig(output_file)
+        print("Age revenue:", age_group_revenue)
         print(f"Age group revenue chart '{output_file}")
         plt.show()
 visualizer = DataVisualizer()        
@@ -141,6 +140,7 @@ class DataVisualizer:
         plt.xticks(rotation=90)
         plt.grid(True)
         plt.savefig(output_file)
+        print('product profit:', product_profit_margin)
         print(f"Profit margin scatter plot saved as '{output_file}'.")
         plt.show()
 visualizer = DataVisualizer()
@@ -243,7 +243,3 @@ visualizer = DataVisualizer(df)
 visualizer.sub_category_performance(metric="Profit")
 visualizer.sub_category_performance(metric="Revenue", output_file="sub_category_revenue.png")
 
-
-
-
-# %%
