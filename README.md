@@ -29,7 +29,7 @@
 ### Data Analyzing
 1. Statistical summaries were generated for numerical columns, including mean, median, standard deviation, and percentiles.
 2. Counted unique values for Product_Category, Sub_Category, and Product.  
-### Data Visualiztion
+### Data Visualization
 1. Customer Age Distribution: Histogram showing the frequency of customers by age.
 2. Gender Distribution: Pie chart displaying the proportion of male and female customers.
 3. Revenue by Age Group: Bar chart visualizing revenue across different age groups.
