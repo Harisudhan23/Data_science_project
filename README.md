@@ -11,24 +11,15 @@
 
 ## Dataset
    The dataset used in this project (sales_data.xlsx) contains the following columns:
-
-   Date: Transaction dates.
-
-   Product_Category: High-level category of products.
-
-   Sub_Category: Specific sub-categories within each product category.
-
-   Product: Individual product names.
-
-   Customer_Age: Age of customers.
-
-   Customer_Gender: Gender of customers.
-
-   Age_Group: Grouped age ranges.
-
-   Revenue: Revenue generated per transaction.
-
-   Profit: Profit earned per transaction  
+   - Date: Transaction dates.
+   - Product_Category: High-level category of products.
+   - Sub_Category: Specific sub-categories within each product category.
+   - Product: Individual product names.
+   - Customer_Age: Age of customers.
+   - Customer_Gender: Gender of customers.
+   - Age_Group: Grouped age ranges.
+   - Revenue: Revenue generated per transaction.
+   - Profit: Profit earned per transaction  
 
 ## Analysis steps
 ### Data Preprocessing
@@ -52,22 +43,15 @@
 3. Profitability Analysis: Assessed profit margins for individual products to identify high-margin items.
 
 ## Generated visualizations
-customer_age_histogram.png - Histogram for customer age distribution.
-
-gender_distribution.png: Pie chart of gender distribution.
-
-age_group_revenue.png: Revenue by age group.
-
-product_category_profit.png: Profit by product category.
-
-profit_margin_scatter.png: Scatter plot of profit margins per product.
-
-revenue_profit_trends.png: Revenue and profit trends over a specific time range.
-
-sub_category_profit.png: Sub-category performance by profit.
-
-sub_category_revenue.png: Sub-category performance by revenue.
+- customer_age_histogram.png - Histogram for customer age distribution.
+- gender_distribution.png: Pie chart of gender distribution.
+- age_group_revenue.png: Revenue by age group.
+- product_category_profit.png: Profit by product category.
+- profit_margin_scatter.png: Scatter plot of profit margins per product.
+- revenue_profit_trends.png: Revenue and profit trends over a specific time range.
+- sub_category_profit.png: Sub-category performance by profit.
+- sub_category_revenue.png: Sub-category performance by revenue.
 
 ## Conclusion
-  This project demonstrates the power of data visualization and analysis in deriving meaningful insights from sales data. By identifying trends and performance metrics, businesses can make informed decisions to improve profitability and customer satisfaction.
+- This project demonstrates the power of data visualization and analysis in deriving meaningful insights from sales data. By identifying trends and performance metrics, businesses can make informed decisions to improve profitability and customer satisfaction.
 
