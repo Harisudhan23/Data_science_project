@@ -24,8 +24,6 @@ obj.Chech_null_value()
 obj.duplicate()
 obj.Datatype()
 
-
-
 # %%
 class DataAnalyzer:
     def summary(self):
