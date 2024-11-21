@@ -10,7 +10,7 @@
   4. Performance Insights: Identify top-performing sub-categories and evaluate profitability and revenue growth.
 
 ## Dataset
-   The dataset used in this project (sales_data.xlsx) contains the following columns:
+   The dataset used in this project (sales_data.xlsx) contains the following columns: 
    - Date: Transaction dates.
    - Product_Category: High-level category of products.
    - Sub_Category: Specific sub-categories within each product category.
