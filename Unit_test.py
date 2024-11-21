@@ -26,6 +26,20 @@ class DataVisualizer:
         plt.savefig(output_file)
         plt.close()
         
+    def gender_distribution(self, output_file="gender_distribution.png"):
+        """Plots the gender distribution as a pie chart."""
+        if "Customer_Gender" not in self.df.columns:
+            print("Column 'Customer_Gender' not found.")
+            return
+        gender_counts = self.df['Customer_Gender'].value_counts()
+        plt.figure(figsize=(8, 6))
+        gender_counts.plot(kind='pie', autopct='%1.1f%%', colors=['green', 'yellow'], startangle=90)
+        plt.title('Gender Distribution')
+        plt.ylabel("")
+        plt.savefig(output_file)
+        print(f"Gender distribution chart saved as '{output_file}'.")
+        plt.show()
+
 class TestDataTasks(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
