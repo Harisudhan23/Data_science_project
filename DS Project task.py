@@ -114,6 +114,7 @@ class DataVisualizer:
         plt.xlabel("Profit")
         plt.ylabel("Product Category")
         plt.savefig(output_file)
+        print('category profit:', category_profit)
         print(f"Product category profit {output_file}")
         plt.show()
 
@@ -243,3 +244,5 @@ visualizer = DataVisualizer(df)
 visualizer.sub_category_performance(metric="Profit")
 visualizer.sub_category_performance(metric="Revenue", output_file="sub_category_revenue.png")
 
+
+# %%
