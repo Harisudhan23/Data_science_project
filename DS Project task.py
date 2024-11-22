@@ -166,7 +166,7 @@ class DataVisualizer:
 # Main Execution
 if __name__ == "__main__":
     # Load data
-    file_path = input("Enter the Excel file path: ").strip()
+    file_path = input("C:/EntansTask/sales.data.xlsx ").strip()
     if not os.path.exists(file_path):
         print("Error: File does not exist.")
         exit()
