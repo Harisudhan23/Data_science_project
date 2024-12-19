@@ -33,7 +33,7 @@ class DataAnalyzer:
         """Generates summary statistics and saves to a CSV file."""
         summary_stats = self.df.describe()
         summary_stats.to_csv(output_file)
-        print(f"Summary statistics saved to '{output_file}'.")
+        print(f"Summary statistics saved to '{output_file}'.") #check the file in the Document folder
 
     def unique_counts(self):
         """Calculates unique counts for specific columns."""
@@ -61,7 +61,7 @@ class DataVisualizer:
         plt.ylabel('Frequency')
         plt.grid(axis='y', linestyle='--', alpha=0.7)
         plt.savefig(output_file)
-        print(f"Histogram saved as '{output_file}'.")
+        print(f"Histogram saved as '{output_file}'.")  #check in the Document folder
         plt.show()
 class DataVisualizer:
     def __init__(self, df):
@@ -96,7 +96,7 @@ class DataVisualizer:
         plt.title('Gender Distribution')
         plt.ylabel("")
         plt.savefig(output_file)
-        print(f"Gender distribution chart saved as '{output_file}'.")
+        print(f"Gender distribution chart saved as '{output_file}'.")  #check in the Document folder 
         plt.show()
 
     def revenue_profit_trends(self, start_month, start_year, end_month, end_year, output_file="revenue_profit.png"):
@@ -122,7 +122,7 @@ class DataVisualizer:
         plt.ylabel("Amount")
         plt.grid(True)
         plt.savefig(output_file)
-        print(f"Revenue and profit trends chart saved as '{output_file}'.")
+        print(f"Revenue and profit trends chart saved as '{output_file}'.")  #check in the Document folder
         plt.show()
 
 
